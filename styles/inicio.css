@@ -5,16 +5,24 @@
     width: 100%;
 }
 
+.main-content-properties {
+    position: absolute;
+    top: 70px;
+    left: 0%;
+}
+
 /* Estilo para el contenido main */
 .principal-title {
     color: var(--title-color);
     text-align: center;
-    margin-top: 150px;
-    padding: 20px;
+    position: static;
+    margin: 100px 0px 0px 0px;
+    padding: 10px;
 }
 .principal-text {
     color: var(--text-color);
     text-align: center;
-    padding: 20px;
+    padding: 10px;
+    margin-bottom: 100px;
     font-size: large;
 }

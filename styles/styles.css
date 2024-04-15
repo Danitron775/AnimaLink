@@ -12,19 +12,43 @@
     --text-color-light: #232946;
     --color-secondary: #fffffe;
     --color-tertiary: #eebbc3;
-  }
+}
 
+/* Definir un estilo para la navbar en pantallas grandes */
+.header-navbar {
+    top: 0;
+    width: 100%;
+}
 
+/* Estilo de la barra de navegación cuando se hace scroll hacia abajo */
+.header-navbar.scrolled {
+    position: fixed;
+    z-index: 1000;
+    background-color: var(--background-color) !important;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
 
+/* Definir un estilo para la navbar en pantallas pequeñas */
+@media screen and (max-width: 992px) {
+    .header-navbar {
+        background-color: var(--background-color) !important;
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 1000;
+    }
+
+}
 
 /* Estilo de los botones con link */
-.button-custom-link{
+.button-custom-link {
     color: var(--button-text-color);
+    text-decoration: none;
     background-color: var(--button-color) !important;
 }
 
 /* Hover de los botones con link */
-.button-custom-link:hover{
+.button-custom-link:hover {
     color: var(--button-color) !important;
     background-color: var(--button-text-color) !important;
 }
@@ -65,13 +89,14 @@
     color: var(--button-text-color) !important;
     background-color: var(--button-color);
     border-radius: 10px;
-    margin: 2px; 
+    margin: 2px;
 }
 
 /* Elementod de la navbar desactivos */
 .navbar-list .inactive {
-    color: var(--title-color) !important; 
+    color: var(--title-color) !important;
 }
+
 /* Elementos de la navbar desactivos al pasar el mouse */
 .navbar-list .inactive:hover {
     color: var(--button-color) !important;
@@ -81,9 +106,9 @@
 .dropdown-menu {
     background-color: var(--background-color) !important;
     min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
     z-index: 1;
-    border-radius: 20px ;
+    border-radius: 20px;
 }
 
 /* Estilo de los elementos del dropdown de la navbar */
