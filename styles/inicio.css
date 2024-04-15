@@ -1,6 +1,20 @@
-/* Clase para que la imagen ocupe toda la ventana disponible*/
+/* Estilo para que la imagen ocupe toda la ventana disponible*/
 .fullscreen-image {
     background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('../img/baner-inicio.png') center / cover no-repeat;
     height: 100vh;
     width: 100%;
+}
+
+/* Estilo para el contenido main */
+.principal-title {
+    color: var(--title-color);
+    text-align: center;
+    margin-top: 150px;
+    padding: 20px;
+}
+.principal-text {
+    color: var(--text-color);
+    text-align: center;
+    padding: 20px;
+    font-size: large;
 }

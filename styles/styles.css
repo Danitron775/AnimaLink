@@ -18,19 +18,27 @@
 
 
 /* Estilo de los botones con link */
-.button-link{
-    text-decoration-line: none;
+.button-custom-link{
     color: var(--button-text-color);
+    background-color: var(--button-color) !important;
 }
+
+/* Hover de los botones con link */
+.button-custom-link:hover{
+    color: var(--button-color) !important;
+    background-color: var(--button-text-color) !important;
+}
+
 /* Estilo de secction button toggle */
-#section-toggle {
+.section-toggle {
     display: flex;
     justify-content: center;
     text-align: center;
     width: 99%;
 }
+
 /* Estilo del button toggle */
-#btn-toggle {
+.btn-toggle {
     background-color: var(--button-color);
     border: none;
     border-radius: 20px;
@@ -39,6 +47,7 @@
     display: block;
     width: 100%;
 }
+
 /* Estilo de la lista de elementos de la Navbar */
 .navbar-list {
     list-style-type: none;
@@ -50,6 +59,7 @@
     background-position: 20%;
     border-radius: 10px;
 }
+
 /* Elementos de la navbar activos */
 .navbar-list .active {
     color: var(--button-text-color) !important;
@@ -57,9 +67,14 @@
     border-radius: 10px;
     margin: 2px; 
 }
+
 /* Elementod de la navbar desactivos */
 .navbar-list .inactive {
     color: var(--title-color) !important; 
+}
+/* Elementos de la navbar desactivos al pasar el mouse */
+.navbar-list .inactive:hover {
+    color: var(--button-color) !important;
 }
 
 /* Estilo del dropdown de la navbar */
