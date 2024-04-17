@@ -7,6 +7,8 @@
   <!-- ESTILOS Y SCRIPS LOCALES -->
   <link rel="stylesheet" href="styles/styles.css" type="text/css">
   <link rel="stylesheet" href="styles/inicio.css" type="text/css">
+  <link rel="stylesheet" href="styles/navbar.css" type="text/css">
+  <script src="script/navbar.js" type="text/javascript" defer></script>
   <script src="script/index.js" type="text/javascript" defer></script>
 
   <!-- BOOTSTRAP -->
@@ -16,70 +18,18 @@
     integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
     crossorigin="anonymous"></script>
 
+  <!-- JQUERY -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
   <title>AnimaLink</title>
 </head>
 
 <body>
   <!-- PRIMERA PARTE -->
   <div class="fullscreen-image">
-    <!-- CONTAINER PARA ORGANIZAR NAVBAR -->
-    <header class="container-fluid header-navbar" id="header-navbar">
-      <nav class="navbar navbar-expand-lg">
-        <!-- PRIMERA SECCIÓN: LOGO -->
-        <section class="col-md-2 col-sm-4 d-flex justify-content-center">
-          <a class="navbar-brand" href="#"><img src="img/nvar-logo-animalink.png" alt="Logo de AnimaLink"></a>
-        </section>
-        <!-- TOGGLE DE NAVBAR -->
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
-          aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <!-- SEGUNDA SECCIÓN: ELEMENTOS DE LA NAVBAR -->
-        <div class="col collapse navbar-collapse justify-content-center navbar-list" id="navbarNavDropdown">
-          <ul class="navbar-nav">
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">Inicio</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link inactive" href="#">Animales Necesitados</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link inactive" href="#">Apadrinamiento</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link inactive" href="#">Contacto</a>
-            </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link inactive dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                aria-expanded="false">
-                FAQ
-              </a>
-              <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="#">Action</a></li>
-                <li><a class="dropdown-item" href="#">Another action</a></li>
-                <li><a class="dropdown-item" href="#">Something else here</a></li>
-              </ul>
-            </li>
-          </ul>
-          <!-- BOTÓN DE INICIAR SESIÓN DENTRO DE LA NAVBAR EN PANTALLAS PEQUEÑAS-->
-          <section class="nav-item d-lg-none d-sm-block section-toggle">
-            <a class="btn button-custom-link d-block btn-lg-small btn-toggle" href="#">Iniciar Sesión</a>
-          </section>
-        </div>
-        <!-- TERCERA SECCIÓN: BOTÓN DE LOGIN Y SIGN UP-->
-        <section class="col-2 d-none d-lg-block text-center">
-          <div class="dropdown">
-            <button class="btn button-custom-link dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Login / Sign Up
-            </button>
-            <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="#">Login</a></li>
-              <li><a class="dropdown-item" href="#">Sign Up</a></li>
-            </ul>
-          </div>
-        </section>
-      </nav>
-    </header>
+    <!-- NAVBAR -->
+    <div class="navbarContainer"></div>
+
     <!-- CONTENIDO PRINCIPAL -->
     <main class="container-fluid justify-content-center position-absolute top-50 start-50 translate-middle">
       <section class="row text-center">
@@ -93,7 +43,6 @@
   </div>
   <!-- SEGUNDA PARTE -->
   <div class="container-fluid">
-    
   </div>
 
 </body>
