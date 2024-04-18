@@ -19,19 +19,6 @@
 
 }
 
-/* Estilo de los botones con link */
-.button-custom-link {
-    color: var(--button-text-color);
-    text-decoration: none;
-    background-color: var(--button-color) !important;
-}
-
-/* Hover de los botones con link */
-.button-custom-link:hover {
-    color: var(--button-color) !important;
-    background-color: var(--button-text-color) !important;
-}
-
 /* Estilo de secction button toggle */
 .section-toggle {
     display: flex;
