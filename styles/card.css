@@ -1,0 +1,33 @@
+.card{
+    background-color: var(--background-color-light) !important;
+    color: var(--text-color-light) !important;
+    margin: 20px;
+    width: 288px !important;
+    height: 357px !important;
+}
+
+.card-body-link{
+    text-decoration: none;
+}
+
+.card img{
+    width: 286px;
+    height: 161px;
+    transition: transform 0.5s ease-in-out;
+}
+
+.card img:hover{
+    transform: scale(1.1);
+}
+
+.card-text{
+    color: var(--text-color-light) !important;
+    padding: 10px;
+}
+
+/* Contenido oculto de manera inicial */
+#contenido-adicional {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease;
+}
