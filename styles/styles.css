@@ -32,11 +32,21 @@ body {
     color: var(--text-color-light) !important;
 }
 
-.style-light h1, .style-light h2, .style-light h3, .style-light h4, .style-light h5, .style-light h6 {
+.style-light h1,
+.style-light h2,
+.style-light h3,
+.style-light h4,
+.style-light h5,
+.style-light h6 {
     color: var(--text-color-light) !important;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     color: var(--title-color) !important;
 }
 
@@ -51,11 +61,10 @@ h1, h2, h3, h4, h5, h6 {
 .principal-title {
     text-align: center;
     position: static;
-    margin: 100px 0px 0px 0px;
     padding: 10px;
 }
+
 .principal-text {
-    color: var(--text-color);
     text-align: center;
     padding: 10px;
     font-size: larger;
@@ -66,6 +75,19 @@ h1, h2, h3, h4, h5, h6 {
     text-align: center;
     padding: 10px;
     margin: 50px;
+}
+
+/* Estilo para aliniar los elementos en el centro */
+.centered-element {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.button-article {
+    margin: 20px 0px;
+    max-width: 100%;
 }
 
 /* Estilo de los botones con link */
@@ -79,6 +101,17 @@ h1, h2, h3, h4, h5, h6 {
 .button-custom-link:hover {
     color: var(--button-color) !important;
     background-color: var(--button-text-color) !important;
+}
+
+.full-screen-section {
+    height: 100vh;
+    width: 100%;
+}
+
+.img-toggle-fullscreen {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)) center / cover no-repeat;
+    height: 100vh;
+    width: 100%;
 }
 
 /* Estilo del footer */

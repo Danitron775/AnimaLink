@@ -5,14 +5,9 @@
     width: 100%;
 }
 
-.button-article {
-    margin: 20px 0px;
-    max-width: 100%;
-}
-
 /* Estilo para el carrusel */
 .screen-carrusel{
-    height: 78vh;
+    height: 100%;
     width: 100%;
     background-color: var(--color-secundary-transparent);
 }
@@ -28,6 +23,13 @@
     justify-content: center;
     align-items: center;
     height: 80%;
+}
+
+.content-carrusel img{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    margin: 0px 20px;
 }
 
 .top-user-carrusel{
