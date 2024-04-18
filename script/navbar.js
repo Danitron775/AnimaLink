@@ -1,23 +1,17 @@
+// FUNCIÓN PARA CAMBIAR EL ESTILO DE LA NAVBAR SEGÚN LA PÁGINA ACTUAL
 $(document).ready(function () {
-  var url = window.location.pathname;
+  
+  let cuerrentPage = window.location.pathname;
+  let currentPage = cuerrentPage.split("/").pop();
 
-  // OBJETO QUE MAPEREA LAS CLAVES DE LOS ELEMENTOS DEL NAVBAR CON SUS VALORES
-  var navItems = {
-    inicio: document.getElementById("inicio"),
-    'animales-necesitados': document.getElementById("anim-necesitados"),
-    apadrinamiento: document.getElementById("apadrinamiento"),
-    contacto: document.getElementById("contacto"),
-    faq: document.getElementById("faq")
-  };
-
-  // ITERAR SOBRE EL OBJETO navItems Y AÑADIR LA CLASE "active" AL ELEMENTO DEL NAVBAR QUE CORRESPONDA
-  for (var key in navItems) {
-    if (url.includes(key + ".html")) {
-      navItems[key].classList.add("active");
+  $(".nav-link").each(function () {
+    let link = $(this).attr("href");
+    if (link == currentPage) {
+      $(this).addClass("active");
     } else {
-      navItems[key].classList.add("inactive");
+      $(this).addClass("inactive");
     }
-  }
+  });
 });
 
 
