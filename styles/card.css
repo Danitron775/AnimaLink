@@ -20,6 +20,11 @@
     transform: scale(1.1);
 }
 
+.card-title{
+    color: var(--text-color-light) !important;
+    padding: 10px;
+}
+
 .card-text{
     color: var(--text-color-light) !important;
     padding: 10px;
