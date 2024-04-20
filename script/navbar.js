@@ -1,3 +1,13 @@
+// FUNCIÓN PARA UNA NAVBAR STICKY
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    document.getElementById("header-navbar").classList.add("scrolled");
+  } else {
+    document.getElementById("header-navbar").classList.remove("scrolled");
+  }
+}
+
+
 // FUNCIÓN PARA CAMBIAR EL ESTILO DE LA NAVBAR SEGÚN LA PÁGINA ACTUAL
 $(document).ready(function () {
   
@@ -14,14 +24,6 @@ $(document).ready(function () {
   });
 });
 
-
-// FUNCIÓN PARA UNA NAVBAR STICKY
+// LLAMAR A LA FUNCIÓN "NAVBAR STICKY"
 window.onscroll = function () { scrollFunction() };
 
-function scrollFunction() {
-  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-    document.getElementById("header-navbar").classList.add("scrolled");
-  } else {
-    document.getElementById("header-navbar").classList.remove("scrolled");
-  }
-}
