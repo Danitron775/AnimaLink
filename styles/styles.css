@@ -15,6 +15,12 @@
     --color-secondary: #fffffe;
     --color-secundary-transparent: #fffffe90;
     --color-tertiary: #eebbc3;
+
+    /* Fondo de elementos */
+    --background-elements: #eebbc3;
+    --background-color-card: #fffffe;
+    --text-color-card: #232946;
+
 }
 
 /* Estilo general de la página */
@@ -23,6 +29,11 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    background-color: var(--background-color) !important;
+    color: var(--text-color) !important;
+}
+
+.style-dark {
     background-color: var(--background-color) !important;
     color: var(--text-color) !important;
 }
