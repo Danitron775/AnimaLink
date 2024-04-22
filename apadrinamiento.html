@@ -12,7 +12,8 @@
     <link rel="stylesheet" href="styles/element-space.css" type="text/css">
 
     <!-- SCRIPS LOCALES -->
-    <script src="script/display-content.js" type="text/javascript" defer></script>
+    <script src="script/display-filter.js" type="text/javascript" defer></script>
+    <script src="script/display-cards.js" type="text/javascript" defer></script>
     <script src="script/navbar.js" type="text/javascript" defer></script>
     <script src="script/fullscreen-img.js" type="text/javascript" defer></script>
     <script src="script/index.js" type="text/javascript" defer></script>
@@ -90,36 +91,79 @@
 
         <!-- TERCERA PARTE -->
         <div class="elements">
-            <!-- ASIDE -->
-            <article class="container-fluid">
-                <aside class="col d-flex align-items-stretch">
-                    <!-- Contenido del aside -->
-                    <h3 class="title">Menú</h3>
-                    <ul>
-                        <li><a href="#">Inicio</a></li>
-                        <li><a href="#">Animales</a></li>
-                        <li><a href="#">Donaciones</a></li>
-                        <li><a href="#">Contacto</a></li>
-                    </ul>
-                </aside>
-            </article>
             <article class="container-fluid text-center">
                 <section class="row">
                     <!-- CONTENIDO PRINCIPAL -->
-                    <h3 class="col title">Explora nuestra colección de animales</h3>
+                    <div class="col-lg-8 col-md-10 col-sm-12 mx-auto">
+                        <h3 class="title">Animales con personalidades únicas</h3>
+                    </div>
                     <!-- BARRA DE BÚSQUEDA -->
-                    <div class="col input-group mb-3">
-                        <input type="text" class="form-control" placeholder="Buscar animales..."
-                            aria-label="Buscar animales" aria-describedby="button-addon2">
-                        <button class="btn button-custom-element" type="button" id="button-addon2">Buscar</button>
+                    <div class="col-lg-3 col-md-7 col-sm-10 mx-auto mt-3">
+                        <div class="input-group">
+                            <input type="text" class="form-control" placeholder="Buscar animales..."
+                                aria-label="Buscar animales" aria-describedby="button-addon2">
+                            <button class="btn button-custom-element" type="button" id="button-addon2">Buscar</button>
+                        </div>
                     </div>
                 </section>
             </article>
+
+            <article class="container-fluid">
+                
+                <button class="" type="button" data-toggle="collapse" data-target="#collapseFilters"
+                    aria-expanded="false" aria-controls="collapseFilters" id="button-filtro">
+                    Opciones de filtros
+                </button>
+
+                <section class="oculto" id="container-filtros">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="input-group mb-3">
+                                <label class="input-group-text" for="inputGroupSelectAnimal">Ordenar por tipo de
+                                    animal</label>
+                                <select class="form-select" id="inputGroupSelectAnimal">
+                                    <option selected>Elige...</option>
+                                    <option value="1">Perro</option>
+                                    <option value="2">Gato</option>
+                                    <option value="3">Conejo</option>
+                                    <option value="4">Ave</option>
+                                    <option value="5">Reptil</option>
+                                    <option value="6">Otro</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="input-group mb-3">
+                                <label class="input-group-text" for="inputGroupSelectEdad">Ordenar por edad</label>
+                                <select class="form-select" id="inputGroupSelectEdad">
+                                    <option selected>Elige...</option>
+                                    <option value="1">Cachorro</option>
+                                    <option value="2">Joven</option>
+                                    <option value="3">Adulto</option>
+                                    <option value="4">Viejo</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="input-group mb-3">
+                                <label class="input-group-text" for="inputGroupSelectPadrinos">Ordenar por cantidad de
+                                    padrinos</label>
+                                <select class="form-select" id="inputGroupSelectPadrinos">
+                                    <option selected>Elige...</option>
+                                    <option value="1">De menor a mayor</option>
+                                    <option value="2">De mayor a menor</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </article>
+
             <!-- CONTENEDOR DE TARGETAS DE ANIMALES -->
-            <article class="container-fluid text-center ">
-                <section class="row">
+            <article id="animal-cards" class="container-fluid text-center ">
+                <section class="row card-container">
                     <!-- TARJETAS DE ANIMALES -->
-                    <div class="col d-flex justify-content-center">
+                    <div class="col justify-content-center">
                         <a href="#" class="card-body-link card">
                             <div>
                                 <img src="img/card-img-not-fund.png" class="card-img-top" alt="...">
@@ -132,7 +176,7 @@
                             </div>
                         </a>
                     </div>
-                    <div class="col d-flex justify-content-center">
+                    <div class="col justify-content-center">
                         <a href="#" class="card-body-link card">
                             <div>
                                 <img src="img/card-img-not-fund.png" class="card-img-top" alt="...">
@@ -145,7 +189,85 @@
                             </div>
                         </a>
                     </div>
-                    <div class="col d-flex justify-content-center">
+                    <div class="col justify-content-center">
+                        <a href="#" class="card-body-link card">
+                            <div>
+                                <img src="img/card-img-not-fund.png" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title">Nombre del animal</h5>
+                                    <p class="card-text ">Some quick example text to build on the card title and
+                                        make up
+                                        the bulk of the card's content.</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col justify-content-center">
+                        <a href="#" class="card-body-link card">
+                            <div>
+                                <img src="img/card-img-not-fund.png" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title">Nombre del animal</h5>
+                                    <p class="card-text ">Some quick example text to build on the card title and
+                                        make up
+                                        the bulk of the card's content.</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col justify-content-center">
+                        <a href="#" class="card-body-link card">
+                            <div>
+                                <img src="img/card-img-not-fund.png" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title">Nombre del animal</h5>
+                                    <p class="card-text ">Some quick example text to build on the card title and
+                                        make up
+                                        the bulk of the card's content.</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col justify-content-center">
+                        <a href="#" class="card-body-link card">
+                            <div>
+                                <img src="img/card-img-not-fund.png" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title">Nombre del animal</h5>
+                                    <p class="card-text ">Some quick example text to build on the card title and
+                                        make up
+                                        the bulk of the card's content.</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col justify-content-center">
+                        <a href="#" class="card-body-link card">
+                            <div>
+                                <img src="img/card-img-not-fund.png" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title">Nombre del animal</h5>
+                                    <p class="card-text ">Some quick example text to build on the card title and
+                                        make up
+                                        the bulk of the card's content.</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col justify-content-center">
+                        <a href="#" class="card-body-link card">
+                            <div>
+                                <img src="img/card-img-not-fund.png" class="card-img-top" alt="...">
+                                <div class="card-body">
+                                    <h5 class="card-title">Nombre del animal</h5>
+                                    <p class="card-text ">Some quick example text to build on the card title and
+                                        make up
+                                        the bulk of the card's content.</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col justify-content-center">
                         <a href="#" class="card-body-link card">
                             <div>
                                 <img src="img/card-img-not-fund.png" class="card-img-top" alt="...">
@@ -159,84 +281,6 @@
                         </a>
                     </div>
                 </section>
-                <section class="row">
-                    <div class="col d-flex justify-content-center">
-                        <a href="#" class="card-body-link card">
-                            <div>
-                                <img src="img/card-img-not-fund.png" class="card-img-top" alt="...">
-                                <div class="card-body">
-                                    <h5 class="card-title">Nombre del animal</h5>
-                                    <p class="card-text ">Some quick example text to build on the card title and
-                                        make up
-                                        the bulk of the card's content.</p>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col d-flex justify-content-center">
-                        <a href="#" class="card-body-link card">
-                            <div>
-                                <img src="img/card-img-not-fund.png" class="card-img-top" alt="...">
-                                <div class="card-body">
-                                    <h5 class="card-title">Nombre del animal</h5>
-                                    <p class="card-text ">Some quick example text to build on the card title and
-                                        make up
-                                        the bulk of the card's content.</p>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col d-flex justify-content-center">
-                        <a href="#" class="card-body-link card">
-                            <div>
-                                <img src="img/card-img-not-fund.png" class="card-img-top" alt="...">
-                                <div class="card-body">
-                                    <h5 class="card-title">Nombre del animal</h5>
-                                    <p class="card-text ">Some quick example text to build on the card title and
-                                        make up
-                                        the bulk of the card's content.</p>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                </section>
-                <div id="contenido-adicional" class="oculto">
-                    <section class="row">
-                        <a href="#" class="col card-body-link d-flex justify-content-center">
-                            <div class="card" style="width: 18rem;">
-                                <img src="img/card-img-not-fund.png" class="card-img-top" alt="...">
-                                <div class="card-body">
-                                    <h5 class="card-title">Nombre del animal</h5>
-                                    <p class="card-text ">Some quick example text to build on the card title and
-                                        make up
-                                        the bulk of the card's content.</p>
-                                </div>
-                            </div>
-                        </a>
-                        <a href="#" class="col card-body-link d-flex justify-content-center">
-                            <div class="card" style="width: 18rem;">
-                                <img src="img/card-img-not-fund.png" class="card-img-top" alt="...">
-                                <div class="card-body">
-                                    <h5 class="card-title">Nombre del animal</h5>
-                                    <p class="card-text ">Some quick example text to build on the card title and
-                                        make up
-                                        the bulk of the card's content.</p>
-                                </div>
-                            </div>
-                        </a>
-                        <a href="#" class="col card-body-link d-flex justify-content-center">
-                            <div class="card" style="width: 18rem;">
-                                <img src="img/card-img-not-fund.png" class="card-img-top" alt="...">
-                                <div class="card-body">
-                                    <h5 class="card-title">Nombre del animal</h5>
-                                    <p class="card-text ">Some quick example text to build on the card title and
-                                        make up
-                                        the bulk of the card's content.</p>
-                                </div>
-                            </div>
-                        </a>
-                    </section>
-                </div>
                 <button class="btn button-custom-element button-article-middle" id="ver-mas">Ver más</button>
             </article>
             <br>

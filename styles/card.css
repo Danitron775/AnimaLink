@@ -36,8 +36,7 @@
     padding: 10px;
 }
 
-/* Contenido oculto de manera inicial */
-#contenido-adicional {
+#container-filtros {
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.5s ease;
